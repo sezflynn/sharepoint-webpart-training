@@ -13,7 +13,7 @@
   },
   "externals": {
     "jquery": "node_modules/jquery/dist/jquery.min.js",
-    "jqueryui":"node_modules/jqueryui/dist/jquery-ui.min.js"
+    "jqueryui":"node_modules/jqueryui/jquery-ui.min.js"
   },
   "localizedResources": {
     "AccordionWebPartStrings": "lib/webparts/accordion/loc/{locale}.js"

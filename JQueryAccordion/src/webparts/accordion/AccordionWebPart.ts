@@ -5,6 +5,11 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { escape } from '@microsoft/sp-lodash-subset';
+import { SPComponentLoader } from '@microsoft/sp-loader';
+import * as jQuery from 'jquery';
+import 'jqueryui';
+
+import AccordionTemplate from './AccordionTemplate';
 
 import styles from './AccordionWebPart.module.scss';
 import * as strings from 'AccordionWebPartStrings';
@@ -15,22 +20,22 @@ export interface IAccordionWebPartProps {
 
 export default class AccordionWebPart extends BaseClientSideWebPart<IAccordionWebPartProps> {
 
+  public constructor(){
+    super();
+    SPComponentLoader.loadCss('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
+  }
+
   public render(): void {
-    this.domElement.innerHTML = `
-      <div class="${ styles.accordion }">
-        <div class="${ styles.container }">
-          <div class="${ styles.row }">
-            <div class="${ styles.column }">
-              <span class="${ styles.title }">Welcome to SharePoint!</span>
-              <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
-              <p class="${ styles.description }">${escape(this.properties.description)}</p>
-              <a href="https://aka.ms/spfx" class="${ styles.button }">
-                <span class="${ styles.label }">Learn more</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>`;
+    this.domElement.innerHTML = AccordionTemplate.templateHtml;
+    const accordionOptions: JQueryUI.AccordionOptions = {
+      animate: true,
+      collapsible: false,
+      icons: {
+        header: 'ui-icon-circle-arrow-e',
+        activeHeader: 'ui-icon-circle-arrow-s'
+      }
+    };
+    jQuery('.accordion', this.domElement).accordion(accordionOptions);
   }
 
   protected get dataVersion(): Version {
