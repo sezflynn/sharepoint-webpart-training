@@ -7,5 +7,6 @@ A basic SPFX webpart following the 'hello world' tuturial at Microsoft Doc's [ge
 
 1. Follow these directions from Microsoft to [set up your development environment](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
 2. Clone the repo
-3. Run `gulp trust-dev-cert`
-4. Run `gulp serve`
+3. Navigate to the Hello World directory
+4. Run `gulp trust-dev-cert`
+5. Run `gulp serve`

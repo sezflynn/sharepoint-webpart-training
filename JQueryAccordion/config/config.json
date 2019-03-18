@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "accordion-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/accordion/AccordionWebPart.js",
+          "manifest": "./src/webparts/accordion/AccordionWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": "node_modules/jquery/dist/jquery.min.js",
+    "jqueryui":"node_modules/jqueryui/jquery-ui.min.js"
+  },
+  "localizedResources": {
+    "AccordionWebPartStrings": "lib/webparts/accordion/loc/{locale}.js"
+  }
+}
