@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "2a37af47-c599-4df3-88b3-bf67dfbe2b34",
+  "alias": "HelloArthurWebPart",
+  "componentType": "WebPart",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
+    "title": { "default": "HelloArthur" },
+    "description": { "default": "The first SP webpart Sez has ever made. Has a HHGttG feel." },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "character": "Arthur Dent",
+      "description": "Wears a dressing gown and drinks tea. Overwhelmed by the galaxy and freaks out at most things.",
+      "motto": "So this is it, we're going to die?",
+      "isPanicking": true,
+      "equippedItem": "Towel",
+      "hasTea": false
+    }
+  }]
+}
