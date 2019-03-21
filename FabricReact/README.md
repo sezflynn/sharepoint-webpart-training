@@ -1,26 +1,10 @@
 ## fabric-react-exercise
 
-This is where you include your WebPart documentation.
+A sharepoint client-side webpart made by following [this tutorial](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/use-fabric-react-components) from the Microsoft documentation.
 
-### Building the code
+### Image assets
 
-```bash
-git clone the repo
-npm i
-npm i -g gulp
-gulp
-```
-
-This package produces the following:
-
-* lib/* - intermediate-stage commonjs build artifacts
-* dist/* - the bundled script, along with other resources
-* deploy/* - all resources which should be uploaded to a CDN.
-
-### Build options
-
-gulp clean - TODO
-gulp test - TODO
-gulp serve - TODO
-gulp bundle - TODO
-gulp package-solution - TODO
+Image assets were provided as part of the tutorial from these locations:
+* [avatar-kat.png](https://github.com/SharePoint/sp-dev-docs/blob/master/assets/avatar-kat.png)
+* [icon-ppt.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/icon-ppt.png)
+* [document-preview.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/document-preview.png)
